@@ -5,24 +5,23 @@ from .forms import BookForm
 
 def get_info(request):
     categorys = Books_category.objects.all()
-
     context = {
-        'category': categorys
+        'categorys': categorys
     }
     return render(request, 'index.html', context=context)
 
 
 def get_books(request, pk):
-    bookss = Books.objects.filter(pk=pk)
+    book = Books.objects.filter(pk=pk)
     context = {
-        'book': bookss
+        'book': book
     }
     return render(request, 'books.html', context=context)
 
 def detail(request, pk):
     books = Books.objects.get(pk=pk)
     context = {
-        'book': books
+        'books': books
     }
     return render(request, 'detail.html', context=context)
 

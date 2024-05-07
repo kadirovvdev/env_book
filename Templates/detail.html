@@ -3,17 +3,17 @@
 
 
 <body>
-<img src="{{ book.image.url }}"/><br>
-Name: {{ book.name }}<br>
-Description: {{ book.description }}<br>
-ISBN: {{ book.ISBN }}<br>
-Price: {{ book.price }}<hr/>
+<img src="{{ books.image.url }}"/><br>
+Name: {{ books.name }}<br>
+Description: {{ books.description }}<br>
+ISBN: {{ books.ISBN }}<br>
+Price: {{ books.price }}<hr/>
 <style>
         img{
             max-width: 250px
         }
     </style>
 <a href="{% url 'get_info'%}" >home</a><br>
-<a href="{% url 'update' book.pk %}" >Update</a><br>
+<a href="{% url 'update' books.pk %}" >Update</a><br>
 
 </body>

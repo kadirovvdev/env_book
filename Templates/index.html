@@ -5,8 +5,8 @@
 <h3>Categories</h3><br>
 
 <body>
-{% for c in category %}
-<a href="{% url 'get_books' c.pk %}" >{{ c.name }}<b>books</b></a><br>
+{% for c in categorys %}
+    <a href="{% url 'get_books' c.pk %}" >{{ c.category_name }}</a><br>
 {% endfor %}
 <a href="{% url 'add_book' %}" ><b>Add Books</b></a><br>
 

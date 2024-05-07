@@ -1,0 +1,19 @@
+<title>Detail</title>
+
+
+
+<body>
+<img src="{{ book.image.url }}"/><br>
+Name: {{ book.name }}<br>
+Description: {{ book.description }}<br>
+ISBN: {{ book.ISBN }}<br>
+Price: {{ book.price }}<hr/>
+<style>
+        img{
+            max-width: 250px
+        }
+    </style>
+<a href="{% url 'get_info'%}" >home</a><br>
+<a href="{% url 'update' book.pk %}" >Update</a><br>
+
+</body>

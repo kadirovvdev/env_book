@@ -1,0 +1,11 @@
+<title>Books</title>
+
+<h1>Books</h1><br>
+
+
+<body>
+{% for b in books %}
+    <a href="{% url 'detail' b.pk %}" >{{ b.price }}</a><hr>
+{% endfor %}
+
+</body>
